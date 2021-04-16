@@ -1,21 +1,32 @@
+import os
 import discord
+from discord.ext import commands
+#contains the bot icon
+from bot_token import _token
 
 if __name__ == "__main__":
-    client = discord.Client()
+    client = commands.Bot(command_prefix='|')
 
     @client.event
-    async def on_ready();
-        print('Alexi is online! ')
-        print('Logged in as {0.user}'.format(client))
+    async def on_read():
+        print('Alexi is online!')
 
-    @client.event
-    async def on_message(message):
-        if message.author == client.user:
-            return
-
-        if message.content.startswith('|hi'):
-            await message.channel.send('Hello')
+    @client.command()
+    async def load(ctxt, extension):
+        client.load_extension(f'lib.{extension}')
         return
-
-    #Place Bot Token key.
-    client.run()
+    
+    @client.command()
+    async def reload(ctxt, extension):
+        client.reload_extension(f'lib.{extension}')
+        return
+    
+    @client.command()
+    async def unload(ctxt, extension):
+        client.unload_extension(f'lib.{extension}')
+    
+    for filename in os.listdir('./lib'):
+        if filename.endswith('.py'):
+            client.load_extension(f'lib.{filename[:-3]}')
+    
+    client.run(_token)
