@@ -3,7 +3,7 @@ A simple project in creating my very own discord bot.
 
 ## Development Roadmap
 - Moderator Commands
-    - ~~ Delete Chat History ~~
+    - ~~Delete Chat History~~
     - Kick
     - Ban
     - Warn
