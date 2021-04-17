@@ -3,19 +3,20 @@ A simple project in creating my very own discord bot.
 
 ## Development Roadmap
     * Moderator Commands
-        * Delete Chat History
+        * ~~Delete Chat History~~
         * Kick
         * Ban
         * Warn
         * Auto-Censorship Text
     
-    * Ticketing System
-        * Don't know yet how to do this.
-    
     * Karma System
         * Users Karma
         * The more user uses bad words lesser karma
         * Don't now how to get good karma yet. Donating?
+    
+    * Ticketing System
+        * Don't know yet how to do this.
+    
 
     * Economy System
         * Wallet and Bank Account
@@ -26,3 +27,4 @@ A simple project in creating my very own discord bot.
 
     * Gaming System
         * Simple Blackjack
+    
